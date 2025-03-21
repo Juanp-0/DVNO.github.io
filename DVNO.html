@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        DVNO
+    </title>
+    <style>
+        [class^="verse"], [class^="chorus"] {
+            display: none;
+            margin: 0 auto;
+        }
+
+        .lyrics {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            position: relative; 
+            z-index: 1; 
+        }
+
+        .lyrics img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            position: absolute; 
+            top: 300px;
+            left: 50%; 
+            transform: translateX(-50%);
+            z-index: 2; 
+        }
+
+        .warn {
+            color: gold;
+            position: absolute; 
+            top: 300px;
+            left: 50%; 
+            transform: translateX(-50%);
+            z-index: 2; 
+        }
+        
+        .songname {
+            color: gold;
+            position: absolute; 
+            top: 5px;
+            left: 7%; 
+            transform: translateX(-50%);
+            z-index: 2;
+            display: none;
+        }
+
+        .verse21 {
+            animation: shake 0.5s ease-in-out infinite; 
+        }
+
+        @keyframes shake{
+            0% {transform: translateX(0);}
+            25% {transform: translateX(-50px);}
+            50% {transform: translateX(50px);}
+            75% {transform: translateX(-50px);}
+            100% {transform: translateX(0);}
+        }
+
+        .chorus15{
+            animation: shake2 0.5s ease-in-out infinite; 
+        }
+        
+        @keyframes shake2{
+            0% {transform: translateX(0);}
+            25% {transform: translateX(-5px);}
+            50% {transform: translateX(5px);}
+            75% {transform: translateX(-5px);}
+            100% {transform: translateX(0);}
+        }
+    </style>
+    <body style="background-color: black;">
+        <audio id="song"> 
+            <source src="dvno.mp3">
+        </audio>
+        <div class="lyrics">
+            <img class="verse1" src="its always the same.png">
+            <img class="verse2" src="Always ashamed.png">
+            <img class="verse3" src="storytelling.png">
+            <img class="verse4" src="When I can't come in.png">
+            <img class="verse5" src="To a hopeless troglodyte.png">       
+            <img class="verse6" src="But one more time.png">
+            <img class="verse7" src="my answer stood.png">
+            <img class="verse8" src="I swear i mean.png">
+            <img class="verse9" src="no offense.png">
+            <img class="verse10" src="But you better learn to read.png">
+            <img class="verse11" src="It's all about membership.png">
+            <img class="verse12" src="I spell it.png">
+            <img class="verse13" src="for the young and old.png">
+            <img class="verse14" src="ugly girls and boys.png">
+            <img class="verse15" src="I put you on my list.png">
+            <img class="verse16" src="And make you clap to this.png">
+            <img class="verse17" src="is it mayhem.png">
+            <img class="verse18" src="or just an ego trip.png">
+            <img class="verse19" src="But only one can win.png">
+            <img class="verse20" src="And soon you'll say.png">
+            <img class="verse21" src="thats him.png">
+            <img class="chorus1" src="D.png">
+            <img class="chorus2" src="V.png">
+            <img class="chorus3" src="N.png">
+            <img class="chorus4" src="O.png">
+            <img class="chorus5" src="4.png">
+            <img class="chorus6" src="capital.png">
+            <img class="chorus7" src="letters.png">
+            <img class="chorus8" src="printed in.png">
+            <img class="chorus9" src="gold.png">
+            <img class="chorus10" src="'Cause details.png">
+            <img class="chorus11" src="make the girls.png">
+            <img class="chorus12" src="sweat.png">            
+            <img class="chorus13" src="even more.png">
+            <img class="chorus14" src="While they're shaking their belts.png">
+            <img class="chorus15" src="their belts.png">
+            <img class="chorus16" src="No need to ask my name.png">        
+            <img class="chorus17" src="to figure out how cool I am.png">
+            <img class="verse22" src="Can anyone read.png">
+            <img class="verse23" src="anyone feel.png">            
+            <img class="verse24" src="That I'm losing my patience.png">
+            <img class="verse25" src="I just came here to bounce.png">
+            <img class="verse26" src="ladies all waxed.png">
+            <img class="verse27" src="they all know I'm coming.png">
+            <img class="verse28" src="i'm coming.png">
+            <img class="verse29" src="i-m-loSing-my-patience-11-3-2025.png">
+        </div>
+
+        <button class="btn" onclick="playAudio()">Play</button>
+        <p class="warn"><br>After clicking Play Button, refresh the Page, then click Play Button again<br>(Only when you have just entered the page)</p>
+        <p class="songname">Song: Justice - DVNO</p>
+        
+        <script>
+            function playAudio() {
+                var audio = document.getElementById("song");
+                audio.play();
+                setTimeout(function() {
+                document.querySelector('.btn').style.display = 'none';
+                }, 0); 
+                setTimeout(function() {
+                document.querySelector('.warn').style.display = 'none';
+                }, 0);
+                setTimeout(function() {
+                document.querySelector('.songname').style.display = 'block';
+                }, 0);
+
+                setTimeout(function() {
+                document.querySelector('.verse1').style.display = 'block';
+                }, 6200); 
+                setTimeout(function() {
+                document.querySelector('.verse1').style.display = 'none';
+                }, 7250); 
+                setTimeout(function() {
+                document.querySelector('.verse2').style.display = 'block';
+                }, 7250); 
+                setTimeout(function() {
+                document.querySelector('.verse2').style.display = 'none';
+                }, 9000); 
+                setTimeout(function() {
+                document.querySelector('.verse3').style.display = 'block';
+                }, 9000); 
+                setTimeout(function() {
+                document.querySelector('.verse3').style.display = 'none';
+                }, 10500); 
+                setTimeout(function() {
+                document.querySelector('.verse4').style.display = 'block';
+                }, 10500); 
+                setTimeout(function() {
+                document.querySelector('.verse4').style.display = 'none';
+                }, 12000); 
+                setTimeout(function() {
+                document.querySelector('.verse5').style.display = 'block';
+                }, 12000); 
+                setTimeout(function() {
+                document.querySelector('.verse5').style.display = 'none';
+                }, 14000); 
+                setTimeout(function() {
+                document.querySelector('.verse6').style.display = 'block';
+                }, 14000); 
+                setTimeout(function() {
+                document.querySelector('.verse7').style.display = 'block';
+                }, 14650); 
+                setTimeout(function() {
+                document.querySelector('.verse6').style.display = 'none';
+                }, 15750); 
+                setTimeout(function() {
+                document.querySelector('.verse7').style.display = 'none';
+                }, 15750); 
+                setTimeout(function() {
+                document.querySelector('.verse8').style.display = 'block';
+                }, 15750); 
+                setTimeout(function() {
+                document.querySelector('.verse8').style.display = 'none';
+                }, 16750); 
+                setTimeout(function() {
+                document.querySelector('.verse9').style.display = 'block';
+                }, 16750); 
+                setTimeout(function() {
+                document.querySelector('.verse9').style.display = 'none';
+                }, 17750); 
+                setTimeout(function() {
+                document.querySelector('.verse10').style.display = 'block';
+                }, 17750); 
+                setTimeout(function() {
+                document.querySelector('.verse10').style.display = 'none';
+                }, 19500); 
+                setTimeout(function() {
+                document.querySelector('.verse11').style.display = 'block';
+                }, 19500); 
+                setTimeout(function() {
+                document.querySelector('.verse11').style.display = 'none';
+                }, 22000); 
+                setTimeout(function() {
+                document.querySelector('.verse12').style.display = 'block';
+                }, 22000); 
+                setTimeout(function() {
+                document.querySelector('.verse13').style.display = 'block';
+                }, 23000); 
+                setTimeout(function() {
+                document.querySelector('.verse12').style.display = 'none';
+                }, 25000); 
+                setTimeout(function() {
+                document.querySelector('.verse13').style.display = 'none';
+                }, 25000);
+                setTimeout(function() {
+                document.querySelector('.verse14').style.display = 'block';
+                }, 25000);
+                setTimeout(function() {
+                document.querySelector('.verse14').style.display = 'none';
+                }, 27000);
+                setTimeout(function() {
+                document.querySelector('.verse15').style.display = 'block';
+                }, 27000);
+                setTimeout(function() {
+                document.querySelector('.verse16').style.display = 'block';
+                }, 28000);
+                setTimeout(function() {
+                document.querySelector('.verse15').style.display = 'none';
+                }, 30000);
+                setTimeout(function() {
+                document.querySelector('.verse16').style.display = 'none';
+                }, 30000);
+                setTimeout(function() {
+                document.querySelector('.verse17').style.display = 'block';
+                }, 30000);
+                setTimeout(function() {
+                document.querySelector('.verse18').style.display = 'block';
+                }, 31000);
+                setTimeout(function() {
+                document.querySelector('.verse17').style.display = 'none';
+                }, 33000);
+                setTimeout(function() {
+                document.querySelector('.verse18').style.display = 'none';
+                }, 33000);
+                setTimeout(function() {
+                document.querySelector('.verse19').style.display = 'block';
+                }, 33000);
+                setTimeout(function() {
+                document.querySelector('.verse19').style.display = 'none';
+                }, 35000);
+                setTimeout(function() {
+                document.querySelector('.verse20').style.display = 'block';
+                }, 35000);
+                setTimeout(function() {
+                document.querySelector('.verse20').style.display = 'none';
+                }, 36000);
+                setTimeout(function() {
+                document.querySelector('.verse21').style.display = 'block';
+                }, 36000);
+                setTimeout(function() {
+                document.querySelector('.verse21').style.display = 'none';
+                }, 38000);
+                setTimeout(function() {
+                document.querySelector('.chorus1').style.display = 'block';
+                }, 38000);
+                setTimeout(function() {
+                document.querySelector('.chorus2').style.display = 'block';
+                }, 38500);
+                setTimeout(function() {
+                document.querySelector('.chorus3').style.display = 'block';
+                }, 38750);
+                setTimeout(function() {
+                document.querySelector('.chorus4').style.display = 'block';
+                }, 39000);
+                setTimeout(function() {
+                document.querySelector('.chorus1').style.display = 'none';
+                }, 39500);
+                setTimeout(function() {
+                document.querySelector('.chorus2').style.display = 'none';
+                }, 39500);
+                setTimeout(function() {
+                document.querySelector('.chorus3').style.display = 'none';
+                }, 39500);
+                setTimeout(function() {
+                document.querySelector('.chorus4').style.display = 'none';
+                }, 39500);
+                setTimeout(function() {
+                document.querySelector('.chorus5').style.display = 'block';
+                }, 39500);
+                setTimeout(function() {
+                document.querySelector('.chorus6').style.display = 'block';
+                }, 40000);
+                setTimeout(function() {
+                document.querySelector('.chorus7').style.display = 'block';
+                }, 41000);
+                setTimeout(function() {
+                document.querySelector('.chorus5').style.display = 'none';
+                }, 42000);
+                setTimeout(function() {
+                document.querySelector('.chorus6').style.display = 'none';
+                }, 42000);
+                setTimeout(function() {
+                document.querySelector('.chorus7').style.display = 'none';
+                }, 42000);
+                setTimeout(function() {
+                document.querySelector('.chorus8').style.display = 'block';
+                }, 42000);
+                setTimeout(function() {
+                document.querySelector('.chorus9').style.display = 'block';
+                }, 42750);
+                setTimeout(function() {
+                document.querySelector('.chorus8').style.display = 'none';
+                }, 43500);
+                setTimeout(function() {
+                document.querySelector('.chorus9').style.display = 'none';
+                }, 43500);
+                setTimeout(function() {
+                document.querySelector('.chorus10').style.display = 'block';
+                }, 43500);
+                setTimeout(function() {
+                document.querySelector('.chorus11').style.display = 'block';
+                }, 44500);
+                setTimeout(function() {
+                document.querySelector('.chorus12').style.display = 'block';
+                }, 45500);
+                setTimeout(function() {
+                document.querySelector('.chorus10').style.display = 'none';
+                }, 46000);
+                setTimeout(function() {
+                document.querySelector('.chorus11').style.display = 'none';
+                }, 46000);
+                setTimeout(function() {
+                document.querySelector('.chorus12').style.display = 'none';
+                }, 46000);
+                setTimeout(function() {
+                document.querySelector('.chorus13').style.display = 'block';
+                }, 46000);
+                setTimeout(function() {
+                document.querySelector('.chorus13').style.display = 'none';
+                }, 47500);
+                setTimeout(function() {
+                document.querySelector('.chorus14').style.display = 'block';
+                }, 47500);
+                setTimeout(function() {
+                document.querySelector('.chorus15').style.display = 'block';
+                }, 48500);
+                setTimeout(function() {
+                document.querySelector('.chorus14').style.display = 'none';
+                }, 49750);
+                setTimeout(function() {
+                document.querySelector('.chorus15').style.display = 'none';
+                }, 49750);
+                setTimeout(function() {
+                document.querySelector('.chorus16').style.display = 'block';
+                }, 49750);
+                setTimeout(function() {
+                document.querySelector('.chorus16').style.display = 'none';
+                }, 51750);
+                setTimeout(function() {
+                document.querySelector('.chorus17').style.display = 'block';
+                }, 51750);
+                setTimeout(function() {
+                document.querySelector('.chorus17').style.display = 'none';
+                }, 54000);
+                setTimeout(function() {
+                document.querySelector('.chorus1').style.display = 'block';
+                }, 54000);
+                setTimeout(function() {
+                document.querySelector('.chorus2').style.display = 'block';
+                }, 54500);
+                setTimeout(function() {
+                document.querySelector('.chorus3').style.display = 'block';
+                }, 54750);
+                setTimeout(function() {
+                document.querySelector('.chorus4').style.display = 'block';
+                }, 55000);
+                setTimeout(function() {
+                document.querySelector('.chorus1').style.display = 'none';
+                }, 55500);
+                setTimeout(function() {
+                document.querySelector('.chorus2').style.display = 'none';
+                }, 55500);
+                setTimeout(function() {
+                document.querySelector('.chorus3').style.display = 'none';
+                }, 55500);
+                setTimeout(function() {
+                document.querySelector('.chorus4').style.display = 'none';
+                }, 55500);
+                setTimeout(function() {
+                document.querySelector('.chorus5').style.display = 'block';
+                }, 55500);
+                setTimeout(function() {
+                document.querySelector('.chorus6').style.display = 'block';
+                }, 56000);
+                setTimeout(function() {
+                document.querySelector('.chorus7').style.display = 'block';
+                }, 57000);
+                setTimeout(function() {
+                document.querySelector('.chorus5').style.display = 'none';
+                }, 58000);
+                setTimeout(function() {
+                document.querySelector('.chorus6').style.display = 'none';
+                }, 58000);
+                setTimeout(function() {
+                document.querySelector('.chorus7').style.display = 'none';
+                }, 58000);
+                setTimeout(function() {
+                document.querySelector('.chorus8').style.display = 'block';
+                }, 58000);
+                setTimeout(function() {
+                document.querySelector('.chorus9').style.display = 'block';
+                }, 58750);
+                setTimeout(function() {
+                document.querySelector('.chorus8').style.display = 'none';
+                }, 59500);
+                setTimeout(function() {
+                document.querySelector('.chorus9').style.display = 'none';
+                }, 59500);
+                setTimeout(function() {
+                document.querySelector('.chorus10').style.display = 'block';
+                }, 59500);
+                setTimeout(function() {
+                document.querySelector('.chorus11').style.display = 'block';
+                }, 60500);
+                setTimeout(function() {
+                document.querySelector('.chorus12').style.display = 'block';
+                }, 61500);
+                setTimeout(function() {
+                document.querySelector('.chorus10').style.display = 'none';
+                }, 62000);
+                setTimeout(function() {
+                document.querySelector('.chorus11').style.display = 'none';
+                }, 62000);
+                setTimeout(function() {
+                document.querySelector('.chorus12').style.display = 'none';
+                }, 62000);
+                setTimeout(function() {
+                document.querySelector('.chorus13').style.display = 'block';
+                }, 62000);
+                setTimeout(function() {
+                document.querySelector('.chorus13').style.display = 'none';
+                }, 63500);
+                setTimeout(function() {
+                document.querySelector('.chorus14').style.display = 'block';
+                }, 63500);
+                setTimeout(function() {
+                document.querySelector('.chorus15').style.display = 'block';
+                }, 64500);
+                setTimeout(function() {
+                document.querySelector('.chorus14').style.display = 'none';
+                }, 65750);
+                setTimeout(function() {
+                document.querySelector('.chorus15').style.display = 'none';
+                }, 65750);
+                setTimeout(function() {
+                document.querySelector('.chorus16').style.display = 'block';
+                }, 65750);
+                setTimeout(function() {
+                document.querySelector('.chorus16').style.display = 'none';
+                }, 67750);
+                setTimeout(function() {
+                document.querySelector('.chorus17').style.display = 'block';
+                }, 67750);
+                setTimeout(function() {
+                document.querySelector('.chorus17').style.display = 'none';
+                }, 70500);
+                setTimeout(function() {
+                document.querySelector('.verse22').style.display = 'block';
+                }, 86000);
+                setTimeout(function() {
+                document.querySelector('.verse23').style.display = 'block';
+                }, 87500);
+                setTimeout(function() {
+                document.querySelector('.verse22').style.display = 'none';
+                }, 90000);
+                setTimeout(function() {
+                document.querySelector('.verse23').style.display = 'none';
+                }, 90000);
+                setTimeout(function() {
+                document.querySelector('.verse24').style.display = 'block';
+                }, 90000);
+                setTimeout(function() {
+                document.querySelector('.verse24').style.display = 'none';
+                }, 91750);
+                setTimeout(function() {
+                document.querySelector('.verse25').style.display = 'block';
+                }, 91750);
+                setTimeout(function() {
+                document.querySelector('.verse25').style.display = 'none';
+                }, 94000);
+                setTimeout(function() {
+                document.querySelector('.verse26').style.display = 'block';
+                }, 94000);
+                setTimeout(function() {
+                document.querySelector('.verse26').style.display = 'none';
+                }, 95750);
+                setTimeout(function() {
+                document.querySelector('.verse27').style.display = 'block';
+                }, 95750);
+                setTimeout(function() {
+                document.querySelector('.verse28').style.display = 'block';
+                }, 96500);
+                setTimeout(function() {
+                document.querySelector('.verse27').style.display = 'none';
+                }, 97750);
+                setTimeout(function() {
+                document.querySelector('.verse28').style.display = 'none';
+                }, 97750);
+                setTimeout(function() {
+                document.querySelector('.verse29').style.display = 'block';
+                }, 97750);
+                setTimeout(function() {
+                document.querySelector('.verse29').style.display = 'none';
+                }, 99750);
+                setTimeout(function() {
+                document.querySelector('.verse25').style.display = 'block';
+                }, 99750);
+                setTimeout(function() {
+                document.querySelector('.verse25').style.display = 'none';
+                }, 102000);
+                setTimeout(function() {
+                document.querySelector('.chorus1').style.display = 'block';
+                }, 102000);
+                setTimeout(function() {
+                document.querySelector('.chorus2').style.display = 'block';
+                }, 102500);
+                setTimeout(function() {
+                document.querySelector('.chorus3').style.display = 'block';
+                }, 102750);
+                setTimeout(function() {
+                document.querySelector('.chorus4').style.display = 'block';
+                }, 103000);
+                setTimeout(function() {
+                document.querySelector('.chorus1').style.display = 'none';
+                }, 103500);
+                setTimeout(function() {
+                document.querySelector('.chorus2').style.display = 'none';
+                }, 103500);
+                setTimeout(function() {
+                document.querySelector('.chorus3').style.display = 'none';
+                }, 103500);
+                setTimeout(function() {
+                document.querySelector('.chorus4').style.display = 'none';
+                }, 103500);
+                setTimeout(function() {
+                document.querySelector('.chorus5').style.display = 'block';
+                }, 103500);
+                setTimeout(function() {
+                document.querySelector('.chorus6').style.display = 'block';
+                }, 104000);
+                setTimeout(function() {
+                document.querySelector('.chorus7').style.display = 'block';
+                }, 105000);
+                setTimeout(function() {
+                document.querySelector('.chorus5').style.display = 'none';
+                }, 106000);
+                setTimeout(function() {
+                document.querySelector('.chorus6').style.display = 'none';
+                }, 106000);
+                setTimeout(function() {
+                document.querySelector('.chorus7').style.display = 'none';
+                }, 106000);
+                setTimeout(function() {
+                document.querySelector('.chorus8').style.display = 'block';
+                }, 106000);
+                setTimeout(function() {
+                document.querySelector('.chorus9').style.display = 'block';
+                }, 106750);
+                setTimeout(function() {
+                document.querySelector('.chorus8').style.display = 'none';
+                }, 107500);
+                setTimeout(function() {
+                document.querySelector('.chorus9').style.display = 'none';
+                }, 107500);
+                setTimeout(function() {
+                document.querySelector('.chorus10').style.display = 'block';
+                }, 107500);
+                setTimeout(function() {
+                document.querySelector('.chorus11').style.display = 'block';
+                }, 108500);
+                setTimeout(function() {
+                document.querySelector('.chorus12').style.display = 'block';
+                }, 109500);
+                setTimeout(function() {
+                document.querySelector('.chorus10').style.display = 'none';
+                }, 110000);
+                setTimeout(function() {
+                document.querySelector('.chorus11').style.display = 'none';
+                }, 110000);
+                setTimeout(function() {
+                document.querySelector('.chorus12').style.display = 'none';
+                }, 110000);
+                setTimeout(function() {
+                document.querySelector('.chorus13').style.display = 'block';
+                }, 110000);
+                setTimeout(function() {
+                document.querySelector('.chorus13').style.display = 'none';
+                }, 111500);
+                setTimeout(function() {
+                document.querySelector('.chorus14').style.display = 'block';
+                }, 111500);
+                setTimeout(function() {
+                document.querySelector('.chorus15').style.display = 'block';
+                }, 112500);
+                setTimeout(function() {
+                document.querySelector('.chorus14').style.display = 'none';
+                }, 113750);
+                setTimeout(function() {
+                document.querySelector('.chorus15').style.display = 'none';
+                }, 113750);
+                setTimeout(function() {
+                document.querySelector('.chorus16').style.display = 'block';
+                }, 113750);
+                setTimeout(function() {
+                document.querySelector('.chorus16').style.display = 'none';
+                }, 115750);
+                setTimeout(function() {
+                document.querySelector('.chorus17').style.display = 'block';
+                }, 115750);
+                setTimeout(function() {
+                document.querySelector('.chorus17').style.display = 'none';
+                }, 118000);
+                setTimeout(function() {
+                document.querySelector('.chorus1').style.display = 'block';
+                }, 118000);
+                setTimeout(function() {
+                document.querySelector('.chorus2').style.display = 'block';
+                }, 118500);
+                setTimeout(function() {
+                document.querySelector('.chorus3').style.display = 'block';
+                }, 118750);
+                setTimeout(function() {
+                document.querySelector('.chorus4').style.display = 'block';
+                }, 119000);
+                setTimeout(function() {
+                document.querySelector('.chorus1').style.display = 'none';
+                }, 119500);
+                setTimeout(function() {
+                document.querySelector('.chorus2').style.display = 'none';
+                }, 119500);
+                setTimeout(function() {
+                document.querySelector('.chorus3').style.display = 'none';
+                }, 119500);
+                setTimeout(function() {
+                document.querySelector('.chorus4').style.display = 'none';
+                }, 119500);
+                setTimeout(function() {
+                document.querySelector('.chorus5').style.display = 'block';
+                }, 119500);
+                setTimeout(function() {
+                document.querySelector('.chorus6').style.display = 'block';
+                }, 120000);
+                setTimeout(function() {
+                document.querySelector('.chorus7').style.display = 'block';
+                }, 121000);
+                setTimeout(function() {
+                document.querySelector('.chorus5').style.display = 'none';
+                }, 122000);
+                setTimeout(function() {
+                document.querySelector('.chorus6').style.display = 'none';
+                }, 122000);
+                setTimeout(function() {
+                document.querySelector('.chorus7').style.display = 'none';
+                }, 122000);
+                setTimeout(function() {
+                document.querySelector('.chorus8').style.display = 'block';
+                }, 122000);
+                setTimeout(function() {
+                document.querySelector('.chorus9').style.display = 'block';
+                }, 122750);
+                setTimeout(function() {
+                document.querySelector('.chorus8').style.display = 'none';
+                }, 123500);
+                setTimeout(function() {
+                document.querySelector('.chorus9').style.display = 'none';
+                }, 123500);
+                setTimeout(function() {
+                document.querySelector('.chorus10').style.display = 'block';
+                }, 123500);
+                setTimeout(function() {
+                document.querySelector('.chorus11').style.display = 'block';
+                }, 124500);
+                setTimeout(function() {
+                document.querySelector('.chorus12').style.display = 'block';
+                }, 125500);
+                setTimeout(function() {
+                document.querySelector('.chorus10').style.display = 'none';
+                }, 126000);
+                setTimeout(function() {
+                document.querySelector('.chorus11').style.display = 'none';
+                }, 126000);
+                setTimeout(function() {
+                document.querySelector('.chorus12').style.display = 'none';
+                }, 126000);
+                setTimeout(function() {
+                document.querySelector('.chorus13').style.display = 'block';
+                }, 126000);
+                setTimeout(function() {
+                document.querySelector('.chorus13').style.display = 'none';
+                }, 127500);
+                setTimeout(function() {
+                document.querySelector('.chorus14').style.display = 'block';
+                }, 127500);
+                setTimeout(function() {
+                document.querySelector('.chorus15').style.display = 'block';
+                }, 128500);
+                setTimeout(function() {
+                document.querySelector('.chorus14').style.display = 'none';
+                }, 129750);
+                setTimeout(function() {
+                document.querySelector('.chorus15').style.display = 'none';
+                }, 129750);
+                setTimeout(function() {
+                document.querySelector('.chorus16').style.display = 'block';
+                }, 129750);
+                setTimeout(function() {
+                document.querySelector('.chorus16').style.display = 'none';
+                }, 131750);
+                setTimeout(function() {
+                document.querySelector('.chorus17').style.display = 'block';
+                }, 131750);
+                setTimeout(function() {
+                document.querySelector('.chorus17').style.display = 'none';
+                }, 138000);
+                setTimeout(function() {
+                document.querySelector('.verse22').style.display = 'block';
+                }, 138000);
+                setTimeout(function() {
+                document.querySelector('.verse23').style.display = 'block';
+                }, 139500);
+                setTimeout(function() {
+                document.querySelector('.verse22').style.display = 'none';
+                }, 142000);
+                setTimeout(function() {
+                document.querySelector('.verse23').style.display = 'none';
+                }, 142000);
+                setTimeout(function() {
+                document.querySelector('.verse24').style.display = 'block';
+                }, 142000);
+                setTimeout(function() {
+                document.querySelector('.verse24').style.display = 'none';
+                }, 143750);
+                setTimeout(function() {
+                document.querySelector('.verse25').style.display = 'block';
+                }, 143750);
+                setTimeout(function() {
+                document.querySelector('.verse25').style.display = 'none';
+                }, 146000);
+                setTimeout(function() {
+                document.querySelector('.verse26').style.display = 'block';
+                }, 146000);
+                setTimeout(function() {
+                document.querySelector('.verse26').style.display = 'none';
+                }, 147500);
+                setTimeout(function() {
+                document.querySelector('.verse27').style.display = 'block';
+                }, 147500);
+                setTimeout(function() {
+                document.querySelector('.verse28').style.display = 'block';
+                }, 148250);
+                setTimeout(function() {
+                document.querySelector('.verse27').style.display = 'none';
+                }, 149500);
+                setTimeout(function() {
+                document.querySelector('.verse28').style.display = 'none';
+                }, 149500);
+                setTimeout(function() {
+                document.querySelector('.verse29').style.display = 'block';
+                }, 149500);
+                setTimeout(function() {
+                document.querySelector('.verse29').style.display = 'none';
+                }, 151500);
+                setTimeout(function() {
+                document.querySelector('.verse25').style.display = 'block';
+                }, 151500);
+                setTimeout(function() {
+                document.querySelector('.verse25').style.display = 'none';
+                }, 154000);
+                setTimeout(function() {
+                document.querySelector('.chorus1').style.display = 'block';
+                }, 154000);
+                setTimeout(function() {
+                document.querySelector('.chorus2').style.display = 'block';
+                }, 154500);
+                setTimeout(function() {
+                document.querySelector('.chorus3').style.display = 'block';
+                }, 154750);
+                setTimeout(function() {
+                document.querySelector('.chorus4').style.display = 'block';
+                }, 155000);
+                setTimeout(function() {
+                document.querySelector('.chorus1').style.display = 'none';
+                }, 155500);
+                setTimeout(function() {
+                document.querySelector('.chorus2').style.display = 'none';
+                }, 155500);
+                setTimeout(function() {
+                document.querySelector('.chorus3').style.display = 'none';
+                }, 155500);
+                setTimeout(function() {
+                document.querySelector('.chorus4').style.display = 'none';
+                }, 155500);
+                setTimeout(function() {
+                document.querySelector('.chorus5').style.display = 'block';
+                }, 155500);
+                setTimeout(function() {
+                document.querySelector('.chorus6').style.display = 'block';
+                }, 156000);
+                setTimeout(function() {
+                document.querySelector('.chorus7').style.display = 'block';
+                }, 157000);
+                setTimeout(function() {
+                document.querySelector('.chorus5').style.display = 'none';
+                }, 158000);
+                setTimeout(function() {
+                document.querySelector('.chorus6').style.display = 'none';
+                }, 158000);
+                setTimeout(function() {
+                document.querySelector('.chorus7').style.display = 'none';
+                }, 158000);
+                setTimeout(function() {
+                document.querySelector('.chorus8').style.display = 'block';
+                }, 158000);
+                setTimeout(function() {
+                document.querySelector('.chorus9').style.display = 'block';
+                }, 158750);
+                setTimeout(function() {
+                document.querySelector('.chorus8').style.display = 'none';
+                }, 159500);
+                setTimeout(function() {
+                document.querySelector('.chorus9').style.display = 'none';
+                }, 159500);
+                setTimeout(function() {
+                document.querySelector('.chorus10').style.display = 'block';
+                }, 159500);
+                setTimeout(function() {
+                document.querySelector('.chorus11').style.display = 'block';
+                }, 160500);
+                setTimeout(function() {
+                document.querySelector('.chorus12').style.display = 'block';
+                }, 161500);
+                setTimeout(function() {
+                document.querySelector('.chorus10').style.display = 'none';
+                }, 162000);
+                setTimeout(function() {
+                document.querySelector('.chorus11').style.display = 'none';
+                }, 162000);
+                setTimeout(function() {
+                document.querySelector('.chorus12').style.display = 'none';
+                }, 162000);
+                setTimeout(function() {
+                document.querySelector('.chorus13').style.display = 'block';
+                }, 162000);
+                setTimeout(function() {
+                document.querySelector('.chorus13').style.display = 'none';
+                }, 163500);
+                setTimeout(function() {
+                document.querySelector('.chorus14').style.display = 'block';
+                }, 163500);
+                setTimeout(function() {
+                document.querySelector('.chorus15').style.display = 'block';
+                }, 164500);
+                setTimeout(function() {
+                document.querySelector('.chorus14').style.display = 'none';
+                }, 165750);
+                setTimeout(function() {
+                document.querySelector('.chorus15').style.display = 'none';
+                }, 165750);
+                setTimeout(function() {
+                document.querySelector('.chorus16').style.display = 'block';
+                }, 165750);
+                setTimeout(function() {
+                document.querySelector('.chorus16').style.display = 'none';
+                }, 167750);
+                setTimeout(function() {
+                document.querySelector('.chorus17').style.display = 'block';
+                }, 167750);
+                setTimeout(function() {
+                document.querySelector('.chorus17').style.display = 'none';
+                }, 170500);
+                
+            }
+        </script>
+    </body>
+</html>
