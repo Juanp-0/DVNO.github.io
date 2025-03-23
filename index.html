@@ -7,6 +7,8 @@
         [class^="verse"], [class^="chorus"] {
             display: none;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .lyrics {
@@ -29,7 +31,7 @@
             top: 300px;
             left: 50%; 
             transform: translateX(-50%);
-            z-index: 2; 
+            z-index: 3; 
         }
 
         .warn {
@@ -38,7 +40,7 @@
             top: 300px;
             left: 50%; 
             transform: translateX(-50%);
-            z-index: 2; 
+            z-index: 3; 
         }
         
         .songname {
@@ -47,7 +49,7 @@
             top: 5px;
             left: 7%; 
             transform: translateX(-50%);
-            z-index: 2;
+            z-index: 3;
             display: none;
         }
 
@@ -74,6 +76,80 @@
             75% {transform: translateX(-5px);}
             100% {transform: translateX(0);}
         }
+
+        .starcircle {
+            display: none;
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            animation: spin 10s linear infinite;
+            z-index: 1;
+        }
+        
+        @keyframes spin {
+            from {
+                transform: rotate(0deg); 
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .star {
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-right: 20px solid transparent;
+            border-bottom: 14px solid white;
+            border-left: 20px solid transparent;
+            top: 50%;
+            left: 50%;
+            margin-top: -7px; 
+            margin-left: -20px;
+        }
+
+        .star:before {
+            border-bottom: 16px solid white;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -9px;
+            left: -13px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+        }
+
+        .star:after {
+            position: absolute;
+            display: block;
+            color: white;
+            top: 0.6px;
+            left: -21px;
+            width: 0px;
+            height: 0px;
+            border-right: 20px solid transparent;
+            border-bottom: 14px solid white;
+            border-left: 20px solid transparent;
+            transform: rotate(-70deg);
+            content: '';
+        }
+
+        .star:nth-child(1) { transform: rotate(0deg) translate(150px) rotate(0deg); }
+        .star:nth-child(2) { transform: rotate(30deg) translate(150px) rotate(-30deg); }
+        .star:nth-child(3) { transform: rotate(60deg) translate(150px) rotate(-60deg); }
+        .star:nth-child(4) { transform: rotate(90deg) translate(150px) rotate(-90deg); }
+        .star:nth-child(5) { transform: rotate(120deg) translate(150px) rotate(-120deg); }
+        .star:nth-child(6) { transform: rotate(150deg) translate(150px) rotate(-150deg); }
+        .star:nth-child(7) { transform: rotate(180deg) translate(150px) rotate(-180deg); }
+        .star:nth-child(8) { transform: rotate(210deg) translate(150px) rotate(-210deg); }
+        .star:nth-child(9) { transform: rotate(240deg) translate(150px) rotate(-240deg); }
+        .star:nth-child(10) { transform: rotate(270deg) translate(150px) rotate(-270deg); }
+        .star:nth-child(11) { transform: rotate(300deg) translate(150px) rotate(-300deg); }
+        .star:nth-child(12) { transform: rotate(330deg) translate(150px) rotate(-330deg); }
+
     </style>
     <body style="background-color: black;">
         <audio id="song"> 
@@ -89,6 +165,20 @@
             <img class="verse7" src="my answer stood.png">
             <img class="verse8" src="I swear i mean.png">
             <img class="verse9" src="no offense.png">
+            <div class="starcircle">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+            </div>
             <img class="verse10" src="But you better learn to read.png">
             <img class="verse11" src="It's all about membership.png">
             <img class="verse12" src="I spell it.png">
@@ -205,6 +295,12 @@
                 }, 17750); 
                 setTimeout(function() {
                 document.querySelector('.verse10').style.display = 'none';
+                }, 19500); 
+                setTimeout(function() {
+                document.querySelector('.starcircle').style.display = 'block';
+                }, 17750); 
+                setTimeout(function() {
+                document.querySelector('.starcircle').style.display = 'none';
                 }, 19500); 
                 setTimeout(function() {
                 document.querySelector('.verse11').style.display = 'block';
